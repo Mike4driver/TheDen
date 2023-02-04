@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FIGHTING_GAME_CHARACTER_SELECT.DRAFT_1.mp3-eaf9d0f5d31c473f48dbbc0f40c3c86a.mp3str"
+
+[deps]
+
+source_file="res://ASSETS/Music/FIGHTING_GAME_CHARACTER_SELECT.DRAFT_1.mp3"
+dest_files=[ "res://.import/FIGHTING_GAME_CHARACTER_SELECT.DRAFT_1.mp3-eaf9d0f5d31c473f48dbbc0f40c3c86a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
