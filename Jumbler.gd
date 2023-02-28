@@ -1,13 +1,11 @@
 extends GridContainer
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	# search folder for characters
+	
+	# for loop to add BasePanels
+	
 	var children = get_children()
 	randomize();
 	for n in children.size():
