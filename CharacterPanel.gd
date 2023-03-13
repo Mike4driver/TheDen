@@ -11,9 +11,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	H_SMOOTH = lerp(H_SMOOTH, HIDDEN,.1)
-	get_node("Sprite").modulate = Color(H_SMOOTH,H_SMOOTH,H_SMOOTH)
+	get_node(".").get_child(0).modulate = Color(H_SMOOTH,H_SMOOTH,H_SMOOTH)
 	HOVERSMOOTH = lerp(HOVERSMOOTH, 100 + HOVER,0.2)
-	get_node("Sprite").scale = Vector2(HOVERSMOOTH/256,HOVERSMOOTH/256)
+	get_node(".").get_child(0).scale = Vector2(HOVERSMOOTH/256,HOVERSMOOTH/256)
 	pass
 
 func _on_BasePanel_mouse_entered():
