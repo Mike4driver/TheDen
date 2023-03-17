@@ -1,7 +1,7 @@
 extends GridContainer
 
 #Alina is a Default character and does not need to be added
-var characters = ["Coni"]
+var characters = ["Coni", "Cami", "Diane","Dulce Ratoncita", "Fistifluffs", "Shaula", "Soony Fox", "Terry"]
 
 
 func _ready():

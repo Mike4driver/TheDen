@@ -1,6 +1,6 @@
 extends Panel
 #TODO: make selectable, send info over to CURSOR object when hovered over.
-var HIDDEN = 0.5
+var HIDDEN = .9
 var H_SMOOTH = 0.0
 var HOVER = 0
 var HOVERSMOOTH = 100

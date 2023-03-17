@@ -55,6 +55,7 @@ columns = 4
 script = ExtResource( 3 )
 
 [node name="BasePanel" type="Panel" parent="ColorRect/Chars/GridContainer"]
+self_modulate = Color( 0.972549, 0.917647, 0.462745, 1 )
 margin_right = 100.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 100, 100 )
@@ -87,6 +88,7 @@ margin_top = -40.0
 margin_right = 600.0
 margin_bottom = 560.0
 rect_pivot_offset = Vector2( 162, 0 )
+mouse_filter = 2
 custom_styles/panel = SubResource( 2 )
 script = ExtResource( 7 )
 
