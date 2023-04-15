@@ -12,7 +12,7 @@ func _ready():
 		var sprite = Sprite.new()
 		sprite = oldSprite
 		sprite.texture = load("res://ASSETS/Characters/"+character+"/THUMBNAIL.png")
-		
+		panel.character_name = character
 		for child in panel.get_children():
 			panel.remove_child(child)
 
