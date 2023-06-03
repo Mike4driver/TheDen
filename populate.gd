@@ -19,7 +19,13 @@ func _ready():
 		panel.add_child(sprite)
 		get_node(".").add_child(panel)
 		print("Added "+ character)
-
+		#var colorfile = File.new()
+		#if(colorfile.file_exists("res://ASSETS/Characters/"+character+"/COLORS.hex")):
+			#colorfile = File.load("res://ASSETS/Characters/"+character+"/COLORS.hex")
+			#print(colorfile)
+			#panel.color1 = Color(0.0,0.0,0.0)
+		#else:
+			#print("ERROR: Could not find color file in "+character+"'s folder")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

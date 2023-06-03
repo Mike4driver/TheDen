@@ -7,9 +7,9 @@
 [ext_resource path="res://Cursor.gd" type="Script" id=5]
 [ext_resource path="res://CharacterPanel.gd" type="Script" id=6]
 [ext_resource path="res://debug_swoosher.gd" type="Script" id=7]
-[ext_resource path="res://ASSETS/Music/FIGHTING_GAME_CHARACTER_SELECT.DRAFT_1.mp3" type="AudioStream" id=8]
+[ext_resource path="res://ASSETS/Music/FIGHTING_GAME_CHARACTER_SELECT.DRAFT.2.wav" type="AudioStream" id=8]
 
-[sub_resource type="VisualScript" id=6]
+[sub_resource type="VisualScript" id=9]
 data = {
 "base_type": "ShaderMaterial",
 "functions": [ {
@@ -26,7 +26,7 @@ data = {
 "vs_unify": true
 }
 
-[sub_resource type="Shader" id=7]
+[sub_resource type="Shader" id=10]
 code = "shader_type canvas_item;
 
 void fragment(){
@@ -40,8 +40,8 @@ void fragment(){
 }"
 
 [sub_resource type="ShaderMaterial" id=8]
-shader = SubResource( 7 )
-script = SubResource( 6 )
+shader = SubResource( 10 )
+script = SubResource( 9 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 1, 1, 1, 1 )
@@ -66,11 +66,12 @@ anchor_bottom = 1.0
 color = Color( 0, 0, 1, 1 )
 
 [node name="FighterLeft" type="ColorRect" parent="ColorRect"]
+self_modulate = Color( 0.65098, 0.12549, 0.188235, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.231373, 0.733333, 0.427451, 1 )
 
 [node name="TextureRect" type="TextureRect" parent="ColorRect/FighterLeft"]
+self_modulate = Color( 1, 0.8, 0.372549, 1 )
 material = SubResource( 8 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -143,6 +144,7 @@ script = ExtResource( 7 )
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -4.0
+autoplay = true
 
 [connection signal="gui_input" from="ColorRect/Chars/GridContainer/BasePanel" to="ColorRect/Chars/GridContainer/BasePanel" method="_on_BasePanel_gui_input"]
 [connection signal="mouse_entered" from="ColorRect/Chars/GridContainer/BasePanel" to="ColorRect/Chars/GridContainer/BasePanel" method="_on_BasePanel_mouse_entered"]

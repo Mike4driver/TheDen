@@ -8,8 +8,12 @@ var character_name = "Alina"
 var texture_guy # Holds the pinup texture for the character
 var ratio = 1.0 # X/Y Dimensions of the pinup texture
 
+var color1 = Color(1.0,0.0,1.0)
+var color2 = Color(0.0,0.0,0.0)
+
 onready var PINUP = get_node("../../../Control/Pinup")
 onready var BackgroundElement = get_node("../../../FighterLeft") # Retrieve node so we can put our picture in it when we get selected
+onready var BackgroundLogo = get_node("../../../FighterLeft/TextureRect")
 
 func _ready():
 	texture_guy = load("res://ASSETS/Characters/"+character_name+"/PINUP1.png")
@@ -44,5 +48,6 @@ func _on_BasePanel_gui_input(event):
 			# Scale sprite by window height + window height times X/Y ratio
 			PINUP.scale = Vector2(get_viewport().size.y / PINUP.texture.get_width() * ratio,get_viewport().size.y / PINUP.texture.get_height())
 			print(character_name + " selected. Ratio:")
-			BackgroundElement.self_modulate = Color(randf(), randf(), randf()) # test function to change color of background.
+			BackgroundElement.self_modulate = color1 # test function to change color of background.
+			BackgroundLogo.self_modulate = color2
 	pass # Replace with function body.
